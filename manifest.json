@@ -1,0 +1,17 @@
+{
+  "name": "SNPS",
+  "manifest_version": 2,
+  "version": "0.1",
+  "description": "Read social networks privacy settings",
+  "icons": { "128": "icon_128.png" },
+  "background": {
+    "persistent": true,
+    "scripts": ["bg.js"]
+  },
+  "permissions": ["http://*/*", "https://*/*", "tabs"],
+  "browser_action": {
+    "default_title": "",
+    "default_icon": "icon_128.png",
+    "default_popup": "popup.html"
+  }
+}
