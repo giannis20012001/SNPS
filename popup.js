@@ -1,10 +1,11 @@
 var readFacebookPrivacySettings = function(){
 
     var port = chrome.runtime.connect({name: "SNPS"});
-    port.postMessage({insertScript: true});
 
     port.onMessage.addListener(function(msg) {
-        console.log(msg);
+        if(msg.result){
+            console.log(msg.result);
+        }
     });
 
 }
