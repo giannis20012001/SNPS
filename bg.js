@@ -141,7 +141,8 @@ var currentCallback;
         if (port.name == "SNPS") {
 
             var sequence = Promise.resolve();
-            readGoogleSettings.forEach(function (setting) {
+            privacySettings = readFacebookSettings.concat(readGoogleSettings);
+            privacySettings.forEach(function (setting) {
                 sequence = sequence.then(function () {
                     return queryPage(setting);
                 }).then(function (result) {
@@ -163,8 +164,9 @@ var currentCallback;
                     }
                     else {
                         if (msg.status == "finishedCommand") {
-                            //chrome.tabs.remove(currentTab.id);
+                            chrome.tabs.remove(currentTab.id);
                             console.log({name: currentSetting.name, result: msg.result});
+                            persistSetting(currentSetting.name, msg.result);
                             currentCallback();
                         }
                     }
@@ -179,7 +181,7 @@ function queryPage(setting) {
 
     return new Promise(function (resolve, reject) {
 
-        chrome.tabs.create({url: setting.url}, function (tab) {
+        chrome.tabs.create({url: setting.url,active:false}, function (tab) {
             currentSetting = setting;
             currentTab = tab;
 
@@ -209,4 +211,37 @@ function insertJavascriptFile(id, file, callback) {
             callback();
         }
     });
+}
+
+
+function persistSetting (settingName, settingValue){
+    chrome.storage.local.get('privacy_settings', function(settings){
+
+        if(Object.keys(settings).length === 0){
+            settings = [];
+        }
+        else{
+            settings = settings.privacy_settings;
+        }
+
+        var isNew = true;
+        for(var i = 0; i<settings.length; i++){
+
+            if(settings[i].name == settingName){
+                settings[i].value = settingValue;
+                isNew = false;
+                break;
+            }
+        }
+
+        if(isNew == true){
+            settings.push({'name': settingName, 'value': settingValue});
+        }
+
+
+        chrome.storage.local.set({'privacy_settings': settings}, function() {
+            console.log("salvat");
+        });
+
+    })
 }

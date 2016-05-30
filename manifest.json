@@ -8,7 +8,7 @@
     "persistent": true,
     "scripts": ["bg.js"]
   },
-  "permissions": ["http://*/*", "https://*/*", "tabs"],
+  "permissions": ["http://*/*", "https://*/*", "tabs","storage"],
   "browser_action": {
     "default_title": "",
     "default_icon": "icon_128.png",
