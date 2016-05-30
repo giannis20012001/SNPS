@@ -6,42 +6,130 @@ readFacebookSettings = [
     {
         name: "Who can see your future posts?",
         url: "https://www.facebook.com/settings?tab=privacy",
-        jquery_selector: ".fbSettingsList:eq(0) .fbSettingsListItem:eq(0) ._nlm",
+        jquery_selector:{
+            element:".fbSettingsList:eq(0) .fbSettingsListItem:eq(0) ._nlm",
+            valuePresence: "inner"
+        }
 
     },
     {
         name: "Who cand send you friend requests?",
         url: "https://www.facebook.com/settings?tab=privacy",
-        jquery_selector: ".fbSettingsList:eq(1) .fbSettingsListItem:eq(0) ._nlm"
-
+        jquery_selector: {
+          element :".fbSettingsList:eq(1) .fbSettingsListItem:eq(0) ._nlm",
+          valuePresence: "inner"
+        }
     },
     {
         name: "Who can look you up using the email address you provided?",
         url: "https://www.facebook.com/settings?tab=privacy",
-        jquery_selector: ".fbSettingsList:eq(2) .fbSettingsListItem:eq(0) ._nlm"
+        jquery_selector: {
+            element: ".fbSettingsList:eq(2) .fbSettingsListItem:eq(0) ._nlm",
+            valuePresence:"inner"
+        }
     },
     {
         name: "Who can look you up using the phone number you provided?",
         url: "https://www.facebook.com/settings?tab=privacy",
-        jquery_selector: ".fbSettingsList:eq(2) .fbSettingsListItem:eq(1) ._nlm"
-
+        jquery_selector:{
+          element:".fbSettingsList:eq(2) .fbSettingsListItem:eq(1) ._nlm",
+          valuePresence: "inner"
+        }
     },
     {
         name: "Do you want search engines outside of Facebook to link to your profile",
         url: "https://www.facebook.com/settings?tab=privacy",
-        jquery_selector: ".fbSettingsList:eq(2) .fbSettingsListItem:eq(2) ._nlm"
+        jquery_selector:{
+          element:".fbSettingsList:eq(2) .fbSettingsListItem:eq(2) ._nlm",
+          valuePresence: "inner"
+        }
     },
     {
         name: "Who can post on your timeline",
         url: "https://www.facebook.com/settings?tab=timeline",
-        jquery_selector: ".fbSettingsList:eq(0) .fbSettingsListItem:eq(0) ._nlm"
+        jquery_selector:{
+            element: ".fbSettingsList:eq(0) .fbSettingsListItem:eq(0) ._nlm",
+            valuePresence: "inner"
+        }
     },
     {
         name: "Review posts friends tag you in before they appear on your timeline?",
         url: "https://www.facebook.com/settings?tab=timeline",
-        jquery_selector: ".fbSettingsList:eq(0) .fbSettingsListItem:eq(1) ._nlm"
+        jquery_selector:{
+            element:".fbSettingsList:eq(0) .fbSettingsListItem:eq(1) ._nlm",
+            valuePresence: "inner"
+        }
     }
 ];
+
+readGoogleSettings =
+    [
+        {
+            name: "Turn off (pause) your searches and browsing activity",
+            url: "https://myaccount.google.com/privacy#accounthistory",
+            jquery_selector: {
+                element:"div[data-aid='search'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"aria-checked"
+            }
+        },
+
+        {
+            name: "Pause location history",
+            url: "https://myaccount.google.com/privacy#accounthistory",
+
+            jquery_selector:{
+                element:"div[data-aid='location'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"aria-checked"
+            } //return value 0 or 1
+        },
+
+        {
+            name: "Pause voice searches and commands",
+            url: "https://myaccount.google.com/privacy#accounthistory",
+            jquery_selector:{
+                element:"div[data-aid='audio'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"aria-checked"
+            } //return value 0 or 1
+        },
+
+        {
+            name: "Pause your YouTube search history",
+            url: "https://myaccount.google.com/privacy#accounthistory",
+            jquery_selector:{
+                element:"div[data-aid='youtubeSearch'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"aria-checked"
+            } //return value 0 or 1
+
+        },
+
+        {
+            name: "Pause your YouTube watch history",
+            url: "https://myaccount.google.com/privacy#accounthistory",
+            jquery_selector:{
+                element:"div[data-aid='youtubeWatch'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"aria-checked"
+            } //return value 0 or 1
+        },
+
+        {
+            name: "Turn off ads based on your interest",
+            url: "https://www.google.com/settings/u/0/ads/authenticated",
+            jquery_selector:{
+                element:"div.Pu > span.iI > div[aria-checked]",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"aria-checked"
+            }  //return value true or false
+
+        }
+
+    ];
+
+
 
 var currentSetting;
 var currentTab;
@@ -53,7 +141,7 @@ var currentCallback;
         if (port.name == "SNPS") {
 
             var sequence = Promise.resolve();
-            readFacebookSettings.forEach(function (setting) {
+            readGoogleSettings.forEach(function (setting) {
                 sequence = sequence.then(function () {
                     return queryPage(setting);
                 }).then(function (result) {
@@ -75,7 +163,7 @@ var currentCallback;
                     }
                     else {
                         if (msg.status == "finishedCommand") {
-                            chrome.tabs.remove(currentTab.id);
+                            //chrome.tabs.remove(currentTab.id);
                             console.log({name: currentSetting.name, result: msg.result});
                             currentCallback();
                         }
@@ -105,11 +193,8 @@ function queryPage(setting) {
 
                 });
             });
-
         });
     });
-
-
 }
 
 
