@@ -319,15 +319,16 @@ readLinkedInSettings =
             }
 
         },
-        
+
         {
-            name: "Turn off ads based on your interest",
-            url: "https://www.google.com/settings/u/0/ads/authenticated",
+            name: "Two-step verification",
+            url: "https://www.linkedin.com/psettings/two-step-verification",
             jquery_selector:{
-                element:"div.Pu > span.iI > div[aria-checked]",
+                element:"div[id='setting-two-step-verification-content'] div",
                 valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"aria-checked"
-            }  //return value true or false
+                attrValue:"value" //return checked or nothing
+
+            }
 
         }
 
