@@ -137,7 +137,7 @@ readLinkedInSettings =
             jquery_selector:{
                 element:"div[id='public-profile-settings'] div",
                 valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"value" //return value on or off
+                attrValue:"value" //return checked or nothing
 
             }
 
@@ -150,7 +150,7 @@ readLinkedInSettings =
             jquery_selector:{
                 element:"div[id='setting-connections-visibility-content'] div",
                 valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"value" //return value true or false
+                attrValue:"value" //return selected or nothing
 
             }
 
@@ -162,33 +162,110 @@ readLinkedInSettings =
             jquery_selector:{
                 element:"div[id='setting-how-you-rank-content'] div",
                 valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"value" //return value true or false
+                attrValue:"value" //return checked or nothing
 
             }
 
         },
 
         {
-            name: "Pause your YouTube search history",
-            url: "https://myaccount.google.com/privacy#accounthistory",
+            name: "Viewers of this profile also viewed",
+            url: "https://www.linkedin.com/psettings/browse-map",
             jquery_selector:{
-                element:"div[data-aid='youtubeSearch'] div",
+                element:"div[id='setting-browse-map-content'] div",
                 valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"aria-checked"
-            } //return value 0 or 1
+                attrValue:"value" //return checked or nothing
+
+            }
 
         },
 
         {
-            name: "Pause your YouTube watch history",
-            url: "https://myaccount.google.com/privacy#accounthistory",
+            name: "Sharing profile edits",
+            url: "https://www.linkedin.com/psettings/activity-broadcast",
             jquery_selector:{
-                element:"div[data-aid='youtubeWatch'] div",
+                element:"div[id='setting-activity-broadcast-content'] div",
                 valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"aria-checked"
-            } //return value 0 or 1
+                attrValue:"value" //return checked or nothing
+
+            }
+
         },
 
+        {
+            name: "Profile viewing options",
+            url: "https://www.linkedin.com/psettings/profile-visibility",
+            jquery_selector:{
+                element:"div[id='setting-profile-visibility-content'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"value" //return checked or nothing
+
+            }
+
+        },
+
+        {
+            name: "Notifying connections when you’re in the news",
+            url: "https://www.linkedin.com/psettings/news-mention-broadcast",
+            jquery_selector:{
+                element:"div[id='option-news-mention'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"value" //return checked or nothing
+
+            }
+
+        },
+
+
+        {
+            name: "Followers",
+            url: "https://www.linkedin.com/psettings/allow-follow",
+            jquery_selector:{
+                element:"div[id='setting-allow-follow-content'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"value" //return selected or nothing
+
+            }
+
+        },
+
+        {
+            name: "Blocking",
+            url: "https://www.linkedin.com/psettings/member-blocking",
+            jquery_selector:{
+                element:"div[id='setting-member-blocking-content'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"value" //return blocking list or class="not-blocking"
+
+            }
+
+        },
+
+        {
+            name: "Unfollowed",
+            url: "https://www.linkedin.com/psettings/customize-stream",
+            jquery_selector:{
+                element:"div[id='setting-customize-stream-content'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"value" //return unfollowed list or class="instructions" You are not currently hiding any content.
+
+            }
+
+        },
+
+        {
+            name: "Unfollowed",
+            url: "https://www.linkedin.com/psettings/customize-stream",
+            jquery_selector:{
+                element:"div[id='setting-customize-stream-content'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"value" //return unfollowed list or class="instructions" You are not currently hiding any content.
+
+            }
+
+        },
+
+        //yolooooooooooooooooooooo
         {
             name: "Turn off ads based on your interest",
             url: "https://www.google.com/settings/u/0/ads/authenticated",
