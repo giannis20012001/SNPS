@@ -247,25 +247,79 @@ readLinkedInSettings =
             jquery_selector:{
                 element:"div[id='setting-customize-stream-content'] div",
                 valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"value" //return unfollowed list or class="instructions" You are not currently hiding any content.
+                attrValue:"value" //return unfollowed list or class="instructions" You are not currently hiding any content
 
             }
 
         },
 
         {
-            name: "Unfollowed",
-            url: "https://www.linkedin.com/psettings/customize-stream",
+            name: "Suggesting you as a connection based on your email address",
+            url: "https://www.linkedin.com/psettings/visibility/email",
             jquery_selector:{
-                element:"div[id='setting-customize-stream-content'] div",
+                element:"div[id='setting-visibility-email-content'] div",
                 valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"value" //return unfollowed list or class="instructions" You are not currently hiding any content.
+                attrValue:"value" //return selected or nothing
 
             }
 
         },
 
-        //yolooooooooooooooooooooo
+        {
+            name: "Suggesting you as a connection based on your phone number",
+            url: "https://www.linkedin.com/psettings/visibility/phone",
+            jquery_selector:{
+                element:"div[id='setting-visibility-phone-content'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"value" //return selected or nothing
+
+            }
+
+        },
+
+        {
+            name: "Representing your organization",
+            url: "https://www.linkedin.com/psettings/meet-the-team",
+            jquery_selector:{
+                element:"div[id='meet-the-team-instructions'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"value" //return checked or nothing
+
+            }
+
+        },
+
+        {
+            name: "Sharing data with third parties",
+            url: "https://www.linkedin.com/psettings/data-sharing",
+            jquery_selector:{
+                element:"div[id='setting-data-sharing-content'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"value" //return checked or nothing
+
+            },
+
+            jquery_selector:{
+                element:"div[id='setting-data-sharing-content'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"value" //return checked or nothing
+
+            }
+
+        },
+
+        {
+            name: "Advertising preferences",
+            url: "https://www.linkedin.com/psettings/enhanced-advertising",
+            jquery_selector:{
+                element:"div[id='setting-enhanced-advertising-content'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"value" //return checked or nothing
+
+            }
+
+        },
+        
         {
             name: "Turn off ads based on your interest",
             url: "https://www.google.com/settings/u/0/ads/authenticated",
