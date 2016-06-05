@@ -129,7 +129,78 @@ readGoogleSettings =
 
     ];
 
+readLinkedInSettings =
+    [
+        {
+            name: "Edit your public profile",
+            url: "https://www.linkedin.com/profile/public-profile-settings",
+            jquery_selector:{
+                element:"div[id='public-profile-settings'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"value" //return value on or off
 
+            }
+
+        },
+
+        {
+            name: "Who can see your connections",
+            url: "https://www.linkedin.com/psettings/connections-visibility",
+
+            jquery_selector:{
+                element:"div[id='setting-connections-visibility-content'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"value" //return value true or false
+
+            }
+
+        },
+
+        {
+            name: "How You Rank",
+            url: "https://www.linkedin.com/psettings/how-you-rank",
+            jquery_selector:{
+                element:"div[id='setting-how-you-rank-content'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"value" //return value true or false
+
+            }
+
+        },
+
+        {
+            name: "Pause your YouTube search history",
+            url: "https://myaccount.google.com/privacy#accounthistory",
+            jquery_selector:{
+                element:"div[data-aid='youtubeSearch'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"aria-checked"
+            } //return value 0 or 1
+
+        },
+
+        {
+            name: "Pause your YouTube watch history",
+            url: "https://myaccount.google.com/privacy#accounthistory",
+            jquery_selector:{
+                element:"div[data-aid='youtubeWatch'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"aria-checked"
+            } //return value 0 or 1
+        },
+
+        {
+            name: "Turn off ads based on your interest",
+            url: "https://www.google.com/settings/u/0/ads/authenticated",
+            jquery_selector:{
+                element:"div.Pu > span.iI > div[aria-checked]",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"aria-checked"
+            }  //return value true or false
+
+        }
+
+    ];
 
 var currentSetting;
 var currentTab;
