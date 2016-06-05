@@ -16,8 +16,8 @@ readFacebookSettings = [
         name: "Who cand send you friend requests?",
         url: "https://www.facebook.com/settings?tab=privacy",
         jquery_selector: {
-          element :".fbSettingsList:eq(1) .fbSettingsListItem:eq(0) ._nlm",
-          valuePresence: "inner"
+            element :".fbSettingsList:eq(1) .fbSettingsListItem:eq(0) ._nlm",
+            valuePresence: "inner"
         }
     },
     {
@@ -32,16 +32,16 @@ readFacebookSettings = [
         name: "Who can look you up using the phone number you provided?",
         url: "https://www.facebook.com/settings?tab=privacy",
         jquery_selector:{
-          element:".fbSettingsList:eq(2) .fbSettingsListItem:eq(1) ._nlm",
-          valuePresence: "inner"
+            element:".fbSettingsList:eq(2) .fbSettingsListItem:eq(1) ._nlm",
+            valuePresence: "inner"
         }
     },
     {
         name: "Do you want search engines outside of Facebook to link to your profile",
         url: "https://www.facebook.com/settings?tab=privacy",
         jquery_selector:{
-          element:".fbSettingsList:eq(2) .fbSettingsListItem:eq(2) ._nlm",
-          valuePresence: "inner"
+            element:".fbSettingsList:eq(2) .fbSettingsListItem:eq(2) ._nlm",
+            valuePresence: "inner"
         }
     },
     {
@@ -327,6 +327,22 @@ readLinkedInSettings =
                 element:"div[id='setting-two-step-verification-content'] div",
                 valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
                 attrValue:"value" //return checked or nothing
+
+            }
+
+        }
+
+    ];
+
+readInstagramSettings =
+    [
+        {
+            name: "Similar Account Suggestions",
+            url: "https://www.instagram.com/accounts/edit",
+            jquery_selector:{
+                element:"input[id='pepChainingEnabled'] input",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"value" //
 
             }
 
