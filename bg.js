@@ -357,8 +357,7 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"div[class='controls login-verification-controls'] div",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"checked" // "checked" exits or no
+                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
@@ -368,9 +367,8 @@ readTwitterSettings =
             name: "Password reset",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"input[id='user_no_username_only_password_reset'] input",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"checked" //"checked" exits or no
+                element:"input[id='user_no_username_only_password_reset'] ",
+                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
@@ -380,16 +378,13 @@ readTwitterSettings =
             name: "Log in with code",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"input[id='one_factor_optout_settings_off'] input",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"checked" //"checked" exits or no
-
+                element:"input[id='one_factor_optout_settings_off'] ",
+                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
             },
 
             jquery_selector:{
-                element:"input[id='one_factor_optout_settings_on'] input",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"checked" //"checked" exits or no
+                element:"input[id='one_factor_optout_settings_on'] ",
+                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
@@ -400,8 +395,7 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"fieldset[id='allow_media_tagging_fieldset'] fieldset",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"checked" //"checked" exits or no
+                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
@@ -411,9 +405,8 @@ readTwitterSettings =
             name: "Tweet privacy",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"input[id='user_protected'] input",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"checked" //"checked" exits or no
+                element:"input[id='user_protected']",
+                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
@@ -423,9 +416,8 @@ readTwitterSettings =
             name: "Tweet location",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"input[id='user_geo_enabled'] input",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"checked" //"checked" exits or no
+                element:"input[id='user_geo_enabled']",
+                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
@@ -435,16 +427,14 @@ readTwitterSettings =
             name: "Discoverability",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"input[id='user_discoverable_by_email'] input",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"checked" //"checked" exits or no
+                element:"input[id='user_discoverable_by_email']",
+                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             },
 
             jquery_selector:{
-                element:"input[id='user_mobile_discoverable'] input",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"checked" //"checked" exits or no
+                element:"input[id='user_mobile_discoverable']",
+                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
@@ -454,9 +444,8 @@ readTwitterSettings =
             name: "Promoted content",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"input[id='allow_ads_personalization'] input",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"checked" //"checked" exits or no
+                element:"input[id='allow_ads_personalization']",
+                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
@@ -467,22 +456,19 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='allow_contributor_request_all'] input",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"checked" //"checked" exits or no
+                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             },
 
             jquery_selector:{
-                element:"input[id='allow_contributor_request_following'] input",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"checked" //"checked" exits or no
+                element:"input[id='allow_contributor_request_following']",
+                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             },
 
             jquery_selector:{
-                element:"input[id='allow_contributor_request_none'] input",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"checked" //"checked" exits or no
+                element:"input[id='allow_contributor_request_none']",
+                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
@@ -492,9 +478,8 @@ readTwitterSettings =
             name: "Direct Messages",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"input[id='allow_dms_from_anyone'] input",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"checked" //"checked" exits or no
+                element:"input[id='allow_dms_from_anyone']",
+                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
@@ -513,6 +498,7 @@ var currentCallback;
 
             var sequence = Promise.resolve();
             privacySettings = readFacebookSettings.concat(readGoogleSettings).concat(readLinkedInSettings).concat(readInstagramSettings).concat(readTwitterSettings);
+					
             privacySettings.forEach(function (setting) {
                 sequence = sequence.then(function () {
                     return queryPage(setting);
