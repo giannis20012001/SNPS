@@ -396,36 +396,105 @@ readTwitterSettings =
         },
 
         {
-            name: "",
+            name: "Photo tagging",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"div[id='public-profile-settings'] div",
+                element:"fieldset[id='allow_media_tagging_fieldset'] fieldset",
                 valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"value" //
+                attrValue:"checked" //"checked" exits or no
 
             }
 
         },
 
         {
-            name: "",
+            name: "Tweet privacy",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"div[id='public-profile-settings'] div",
+                element:"input[id='user_protected'] input",
                 valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"value" //
+                attrValue:"checked" //"checked" exits or no
 
             }
 
         },
 
         {
-            name: "",
-            url: "",
+            name: "Tweet location",
+            url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"div[id='setting-two-step-verification-content'] div",
+                element:"input[id='user_geo_enabled'] input",
                 valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-                attrValue:"value" //
+                attrValue:"checked" //"checked" exits or no
+
+            }
+
+        },
+
+        {
+            name: "Discoverability",
+            url: "https://twitter.com/settings/security",
+            jquery_selector:{
+                element:"input[id='user_discoverable_by_email'] input",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"checked" //"checked" exits or no
+
+            },
+
+            jquery_selector:{
+                element:"input[id='user_mobile_discoverable'] input",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"checked" //"checked" exits or no
+
+            }
+
+        },
+
+        {
+            name: "Promoted content",
+            url: "https://twitter.com/settings/security",
+            jquery_selector:{
+                element:"input[id='allow_ads_personalization'] input",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"checked" //"checked" exits or no
+
+            }
+
+        },
+
+        {
+            name: "Twitter for teams",
+            url: "https://twitter.com/settings/security",
+            jquery_selector:{
+                element:"input[id='allow_contributor_request_all'] input",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"checked" //"checked" exits or no
+
+            },
+
+            jquery_selector:{
+                element:"input[id='allow_contributor_request_following'] input",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"checked" //"checked" exits or no
+
+            },
+
+            jquery_selector:{
+                element:"input[id='allow_contributor_request_none'] input",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"checked" //"checked" exits or no
+
+            }
+
+        },
+
+        {
+            name: "Direct Messages",
+            url: "https://twitter.com/settings/security",
+            jquery_selector:{
+                element:"input[id='allow_dms_from_anyone'] input",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"checked" //"checked" exits or no
 
             }
 
@@ -443,7 +512,7 @@ var currentCallback;
         if (port.name == "SNPS") {
 
             var sequence = Promise.resolve();
-            privacySettings = readFacebookSettings.concat(readGoogleSettings);
+            privacySettings = readFacebookSettings.concat(readGoogleSettings).concat(readLinkedInSettings).concat(readInstagramSettings).concat(readTwitterSettings);
             privacySettings.forEach(function (setting) {
                 sequence = sequence.then(function () {
                     return queryPage(setting);
