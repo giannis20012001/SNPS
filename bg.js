@@ -350,6 +350,34 @@ readInstagramSettings =
 
     ];
 
+readTwitterSettings =
+    [
+        {
+            name: "",
+            url: "",
+            jquery_selector:{
+                element:"div[id='public-profile-settings'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"value" //
+
+            }
+
+        },
+
+        {
+            name: "",
+            url: "",
+            jquery_selector:{
+                element:"div[id='setting-two-step-verification-content'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"value" //
+
+            }
+
+        }
+
+    ];
+
 var currentSetting;
 var currentTab;
 var currentCallback;
