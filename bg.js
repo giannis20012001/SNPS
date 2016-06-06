@@ -353,8 +353,63 @@ readInstagramSettings =
 readTwitterSettings =
     [
         {
+            name: "Login verification",
+            url: "https://twitter.com/settings/security",
+            jquery_selector:{
+                element:"div[class='controls login-verification-controls'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"checked" // "checked" exits or no
+
+            }
+
+        },
+
+        {
+            name: "Password reset",
+            url: "https://twitter.com/settings/security",
+            jquery_selector:{
+                element:"input[id='user_no_username_only_password_reset'] input",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"checked" //"checked" exits or no
+
+            }
+
+        },
+
+        {
+            name: "Log in with code",
+            url: "https://twitter.com/settings/security",
+            jquery_selector:{
+                element:"input[id='one_factor_optout_settings_off'] input",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"checked" //"checked" exits or no
+
+            },
+
+            jquery_selector:{
+                element:"input[id='one_factor_optout_settings_on'] input",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"checked" //"checked" exits or no
+
+            }
+
+        },
+
+        {
             name: "",
-            url: "",
+            url: "https://twitter.com/settings/security",
+            jquery_selector:{
+                element:"div[id='public-profile-settings'] div",
+                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                attrValue:"value" //
+
+            }
+
+        },
+
+        {
+            name: "",
+            url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"div[id='public-profile-settings'] div",
                 valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
