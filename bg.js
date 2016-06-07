@@ -135,7 +135,7 @@ readLinkedInSettings =
             name: "Edit your public profile",
             url: "https://www.linkedin.com/profile/public-profile-settings",
             jquery_selector:{
-                element:"input[name='visibilityLevel'] ",
+                element:"input[name='visibilityLevel']",
                 valueType:"radio"
 
             }//return checked or nothing
@@ -143,11 +143,12 @@ readLinkedInSettings =
         },
 
         {
+            //TODO:Check if correct
             name: "Who can see your connections",
             url: "https://www.linkedin.com/psettings/connections-visibility",
 
             jquery_selector:{
-                element:"div[id='setting-connections-visibility-content'] ",
+                element:"select[id='allow-connections-browse']",
                 valueType:"selected"
 
             }//return selected or nothing
@@ -158,7 +159,7 @@ readLinkedInSettings =
             name: "How You Rank",
             url: "https://www.linkedin.com/psettings/how-you-rank",
             jquery_selector:{
-                element:"div[id='setting-how-you-rank-content'] ",
+                element:"div[id='setting-how-you-rank-content']",
                 valueType:"checked"
 
             }//return checked or nothing
@@ -169,7 +170,7 @@ readLinkedInSettings =
             name: "Viewers of this profile also viewed",
             url: "https://www.linkedin.com/psettings/browse-map",
             jquery_selector:{
-                element:"div[id='setting-browse-map-content'] ",
+                element:"div[id='setting-browse-map-content']",
                 valueType:"checked"
 
             }//return checked or nothing
@@ -180,7 +181,7 @@ readLinkedInSettings =
             name: "Sharing profile edits",
             url: "https://www.linkedin.com/psettings/activity-broadcast",
             jquery_selector:{
-                element:"div[id='setting-activity-broadcast-content'] ",
+                element:"div[id='setting-activity-broadcast-content']",
                 valueType:"checked"
 
             }//return checked or nothing
@@ -191,7 +192,7 @@ readLinkedInSettings =
             name: "Profile viewing options",
             url: "https://www.linkedin.com/psettings/profile-visibility",
             jquery_selector:{
-                element:"div[id='setting-profile-visibility-content'] ",
+                element:"div[id='setting-profile-visibility-content']",
                 valueType:"checked"
 
             }//return checked or nothing
@@ -202,7 +203,7 @@ readLinkedInSettings =
             name: "Notifying connections when you’re in the news",
             url: "https://www.linkedin.com/psettings/news-mention-broadcast",
             jquery_selector:{
-                element:"div[id='option-news-mention'] ",
+                element:"div[id='option-news-mention']",
                 valueType:"checked"
 
             }//return checked or nothing
@@ -214,7 +215,7 @@ readLinkedInSettings =
             name: "Followers",
             url: "https://www.linkedin.com/psettings/allow-follow",
             jquery_selector:{
-                element:"div[id='setting-allow-follow-content'] ",
+                element:"div[id='setting-allow-follow-content']",
                 valueType:"selected"
 
             }//return selected or nothing
@@ -226,7 +227,7 @@ readLinkedInSettings =
             name: "Blocking",
             url: "https://www.linkedin.com/psettings/member-blocking",
             jquery_selector:{
-                element:"div[id='setting-member-blocking-content'] ",
+                element:"div[id='setting-member-blocking-content']",
                 valueType:"attrValue",
                 attrValue:"value"
 
@@ -239,7 +240,7 @@ readLinkedInSettings =
             name: "Unfollowed",
             url: "https://www.linkedin.com/psettings/customize-stream",
             jquery_selector:{
-                element:"div[id='setting-customize-stream-content'] ",
+                element:"div[id='setting-customize-stream-content']",
                 valueType:"attrValue",
                 attrValue:"value"
 
@@ -251,7 +252,7 @@ readLinkedInSettings =
             name: "Suggesting you as a connection based on your email address",
             url: "https://www.linkedin.com/psettings/visibility/email",
             jquery_selector:{
-                element:"div[id='setting-visibility-email-content'] ",
+                element:"div[id='setting-visibility-email-content']",
                 valueType:"selected"
 
             }//return selected or nothing
@@ -262,7 +263,7 @@ readLinkedInSettings =
             name: "Suggesting you as a connection based on your phone number",
             url: "https://www.linkedin.com/psettings/visibility/phone",
             jquery_selector:{
-                element:"div[id='setting-visibility-phone-content'] ",
+                element:"div[id='setting-visibility-phone-content']",
                 valueType:"selected"
 
             }//return selected or nothing
@@ -273,7 +274,7 @@ readLinkedInSettings =
             name: "Representing your organization",
             url: "https://www.linkedin.com/psettings/meet-the-team",
             jquery_selector:{
-                element:"div[id='meet-the-team-instructions'] ",
+                element:"div[id='meet-the-team-instructions']",
                 valueType:"checked"
 
             }//return checked or nothing
@@ -284,13 +285,13 @@ readLinkedInSettings =
             name: "Sharing data with third parties",
             url: "https://www.linkedin.com/psettings/data-sharing",
             jquery_selector:{
-                element:"div[id='setting-data-sharing-content'] ",
+                element:"div[id='setting-data-sharing-content']",
                 valueType:"checked"
 
             }, //return checked or nothing
 
             jquery_selector:{
-                element:"div[id='setting-data-sharing-content'] ",
+                element:"div[id='setting-data-sharing-content']",
                 valueType:"checked"
 
             }//return checked or nothing
@@ -301,7 +302,7 @@ readLinkedInSettings =
             name: "Advertising preferences",
             url: "https://www.linkedin.com/psettings/enhanced-advertising",
             jquery_selector:{
-                element:"div[id='setting-enhanced-advertising-content'] ",
+                element:"div[id='setting-enhanced-advertising-content']",
                 valueType:"checked"
 
             }//return checked or nothing
@@ -312,7 +313,7 @@ readLinkedInSettings =
             name: "Two-step verification",
             url: "https://www.linkedin.com/psettings/two-step-verification",
             jquery_selector:{
-                element:"div[id='setting-two-step-verification-content'] ",
+                element:"div[id='setting-two-step-verification-content']",
                 valueType:"checked"
 
             } //return checked or nothing
@@ -343,7 +344,7 @@ readTwitterSettings =
             name: "Login verification",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"div[class='controls login-verification-controls'] ",
+                element:"div[class='controls login-verification-controls']",
                 valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
@@ -354,7 +355,7 @@ readTwitterSettings =
             name: "Password reset",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"input[id='user_no_username_only_password_reset'] ",
+                element:"input[id='user_no_username_only_password_reset']",
                 valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
@@ -365,12 +366,12 @@ readTwitterSettings =
             name: "Log in with code",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"input[id='one_factor_optout_settings_off'] ",
+                element:"input[id='one_factor_optout_settings_off']",
                 valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
             },
 
             jquery_selector:{
-                element:"input[id='one_factor_optout_settings_on'] ",
+                element:"input[id='one_factor_optout_settings_on']",
                 valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
@@ -381,7 +382,7 @@ readTwitterSettings =
             name: "Photo tagging",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"fieldset[id='allow_media_tagging_fieldset'] ",
+                element:"fieldset[id='allow_media_tagging_fieldset']",
                 valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
@@ -392,7 +393,7 @@ readTwitterSettings =
             name: "Tweet privacy",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"input[id='user_protected'] ",
+                element:"input[id='user_protected']",
                 valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
@@ -403,7 +404,7 @@ readTwitterSettings =
             name: "Tweet location",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"input[id='user_geo_enabled'] ",
+                element:"input[id='user_geo_enabled']",
                 valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
@@ -414,13 +415,13 @@ readTwitterSettings =
             name: "Discoverability",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"input[id='user_discoverable_by_email'] ",
+                element:"input[id='user_discoverable_by_email']",
                 valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             },
 
             jquery_selector:{
-                element:"input[id='user_mobile_discoverable'] ",
+                element:"input[id='user_mobile_discoverable']",
                 valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
@@ -431,7 +432,7 @@ readTwitterSettings =
             name: "Promoted content",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"input[id='allow_ads_personalization'] ",
+                element:"input[id='allow_ads_personalization']",
                 valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
@@ -442,19 +443,19 @@ readTwitterSettings =
             name: "Twitter for teams",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"input[id='allow_contributor_request_all'] ",
+                element:"input[id='allow_contributor_request_all']",
                 valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             },
 
             jquery_selector:{
-                element:"input[id='allow_contributor_request_following'] ",
+                element:"input[id='allow_contributor_request_following']",
                 valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             },
 
             jquery_selector:{
-                element:"input[id='allow_contributor_request_none'] ",
+                element:"input[id='allow_contributor_request_none']",
                 valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
@@ -465,7 +466,7 @@ readTwitterSettings =
             name: "Direct Messages",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"input[id='allow_dms_from_anyone'] ",
+                element:"input[id='allow_dms_from_anyone']",
                 valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
