@@ -8,7 +8,7 @@ readFacebookSettings = [
         url: "https://www.facebook.com/settings?tab=privacy",
         jquery_selector:{
             element:".fbSettingsList:eq(0) .fbSettingsListItem:eq(0) ._nlm",
-            valuePresence: "inner"
+            valueType: "inner"
         }
 
     },
@@ -17,7 +17,7 @@ readFacebookSettings = [
         url: "https://www.facebook.com/settings?tab=privacy",
         jquery_selector: {
             element :".fbSettingsList:eq(1) .fbSettingsListItem:eq(0) ._nlm",
-            valuePresence: "inner"
+            valueType: "inner"
         }
     },
     {
@@ -25,7 +25,7 @@ readFacebookSettings = [
         url: "https://www.facebook.com/settings?tab=privacy",
         jquery_selector: {
             element: ".fbSettingsList:eq(2) .fbSettingsListItem:eq(0) ._nlm",
-            valuePresence:"inner"
+            valueType:"inner"
         }
     },
     {
@@ -33,7 +33,7 @@ readFacebookSettings = [
         url: "https://www.facebook.com/settings?tab=privacy",
         jquery_selector:{
             element:".fbSettingsList:eq(2) .fbSettingsListItem:eq(1) ._nlm",
-            valuePresence: "inner"
+            valueType: "inner"
         }
     },
     {
@@ -41,7 +41,7 @@ readFacebookSettings = [
         url: "https://www.facebook.com/settings?tab=privacy",
         jquery_selector:{
             element:".fbSettingsList:eq(2) .fbSettingsListItem:eq(2) ._nlm",
-            valuePresence: "inner"
+            valueType: "inner"
         }
     },
     {
@@ -49,7 +49,7 @@ readFacebookSettings = [
         url: "https://www.facebook.com/settings?tab=timeline",
         jquery_selector:{
             element: ".fbSettingsList:eq(0) .fbSettingsListItem:eq(0) ._nlm",
-            valuePresence: "inner"
+            valueType: "inner"
         }
     },
     {
@@ -57,7 +57,7 @@ readFacebookSettings = [
         url: "https://www.facebook.com/settings?tab=timeline",
         jquery_selector:{
             element:".fbSettingsList:eq(0) .fbSettingsListItem:eq(1) ._nlm",
-            valuePresence: "inner"
+            valueType: "inner"
         }
     }
 ];
@@ -69,7 +69,7 @@ readGoogleSettings =
             url: "https://myaccount.google.com/privacy#accounthistory",
             jquery_selector: {
                 element:"div[data-aid='search'] div",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
                 attrValue:"aria-checked"
             }
         },
@@ -80,7 +80,7 @@ readGoogleSettings =
 
             jquery_selector:{
                 element:"div[data-aid='location'] div",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
                 attrValue:"aria-checked"
             } //return value 0 or 1
         },
@@ -90,7 +90,7 @@ readGoogleSettings =
             url: "https://myaccount.google.com/privacy#accounthistory",
             jquery_selector:{
                 element:"div[data-aid='audio'] div",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
                 attrValue:"aria-checked"
             } //return value 0 or 1
         },
@@ -100,7 +100,7 @@ readGoogleSettings =
             url: "https://myaccount.google.com/privacy#accounthistory",
             jquery_selector:{
                 element:"div[data-aid='youtubeSearch'] div",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
                 attrValue:"aria-checked"
             } //return value 0 or 1
 
@@ -111,7 +111,7 @@ readGoogleSettings =
             url: "https://myaccount.google.com/privacy#accounthistory",
             jquery_selector:{
                 element:"div[data-aid='youtubeWatch'] div",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
                 attrValue:"aria-checked"
             } //return value 0 or 1
         },
@@ -121,7 +121,7 @@ readGoogleSettings =
             url: "https://www.google.com/settings/u/0/ads/authenticated",
             jquery_selector:{
                 element:"div.Pu > span.iI > div[aria-checked]",
-                valuePresence:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"attrValue", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
                 attrValue:"aria-checked"
             }  //return value true or false
 
@@ -137,7 +137,7 @@ readLinkedInSettings =
             url: "https://www.linkedin.com/profile/public-profile-settings",
             jquery_selector:{
                 element:"input[id='selector-full-visibilityLevel-saveWPSettings'] ",
-                valuePresence:"checked"
+                valueType:"checked"
 
             }//return checked or nothing
 
@@ -149,7 +149,7 @@ readLinkedInSettings =
 
             jquery_selector:{
                 element:"div[id='setting-connections-visibility-content'] ",
-                valuePresence:"selected"
+                valueType:"selected"
 
             }//return selected or nothing
 
@@ -160,7 +160,7 @@ readLinkedInSettings =
             url: "https://www.linkedin.com/psettings/how-you-rank",
             jquery_selector:{
                 element:"div[id='setting-how-you-rank-content'] ",
-                valuePresence:"checked"
+                valueType:"checked"
 
             }//return checked or nothing
 
@@ -171,7 +171,7 @@ readLinkedInSettings =
             url: "https://www.linkedin.com/psettings/browse-map",
             jquery_selector:{
                 element:"div[id='setting-browse-map-content'] ",
-                valuePresence:"checked"
+                valueType:"checked"
 
             }//return checked or nothing
 
@@ -182,7 +182,7 @@ readLinkedInSettings =
             url: "https://www.linkedin.com/psettings/activity-broadcast",
             jquery_selector:{
                 element:"div[id='setting-activity-broadcast-content'] ",
-                valuePresence:"checked"
+                valueType:"checked"
 
             }//return checked or nothing
 
@@ -193,7 +193,7 @@ readLinkedInSettings =
             url: "https://www.linkedin.com/psettings/profile-visibility",
             jquery_selector:{
                 element:"div[id='setting-profile-visibility-content'] ",
-                valuePresence:"checked"
+                valueType:"checked"
 
             }//return checked or nothing
 
@@ -204,7 +204,7 @@ readLinkedInSettings =
             url: "https://www.linkedin.com/psettings/news-mention-broadcast",
             jquery_selector:{
                 element:"div[id='option-news-mention'] ",
-                valuePresence:"checked"
+                valueType:"checked"
 
             }//return checked or nothing
 
@@ -216,7 +216,7 @@ readLinkedInSettings =
             url: "https://www.linkedin.com/psettings/allow-follow",
             jquery_selector:{
                 element:"div[id='setting-allow-follow-content'] ",
-                valuePresence:"selected"
+                valueType:"selected"
 
             }//return selected or nothing
 
@@ -228,7 +228,7 @@ readLinkedInSettings =
             url: "https://www.linkedin.com/psettings/member-blocking",
             jquery_selector:{
                 element:"div[id='setting-member-blocking-content'] ",
-                valuePresence:"attrValue",
+                valueType:"attrValue",
                 attrValue:"value"
 
             }//return blocking list or class="not-blocking"
@@ -241,7 +241,7 @@ readLinkedInSettings =
             url: "https://www.linkedin.com/psettings/customize-stream",
             jquery_selector:{
                 element:"div[id='setting-customize-stream-content'] ",
-                valuePresence:"attrValue",
+                valueType:"attrValue",
                 attrValue:"value"
 
             }//return unfollowed list or class="instructions" You are not currently hiding any content
@@ -253,7 +253,7 @@ readLinkedInSettings =
             url: "https://www.linkedin.com/psettings/visibility/email",
             jquery_selector:{
                 element:"div[id='setting-visibility-email-content'] ",
-                valuePresence:"selected"
+                valueType:"selected"
 
             }//return selected or nothing
 
@@ -264,7 +264,7 @@ readLinkedInSettings =
             url: "https://www.linkedin.com/psettings/visibility/phone",
             jquery_selector:{
                 element:"div[id='setting-visibility-phone-content'] ",
-                valuePresence:"selected"
+                valueType:"selected"
 
             }//return selected or nothing
 
@@ -275,7 +275,7 @@ readLinkedInSettings =
             url: "https://www.linkedin.com/psettings/meet-the-team",
             jquery_selector:{
                 element:"div[id='meet-the-team-instructions'] ",
-                valuePresence:"checked"
+                valueType:"checked"
 
             }//return checked or nothing
 
@@ -286,13 +286,13 @@ readLinkedInSettings =
             url: "https://www.linkedin.com/psettings/data-sharing",
             jquery_selector:{
                 element:"div[id='setting-data-sharing-content'] ",
-                valuePresence:"checked"
+                valueType:"checked"
 
             }, //return checked or nothing
 
             jquery_selector:{
                 element:"div[id='setting-data-sharing-content'] ",
-                valuePresence:"checked"
+                valueType:"checked"
 
             }//return checked or nothing
 
@@ -303,7 +303,7 @@ readLinkedInSettings =
             url: "https://www.linkedin.com/psettings/enhanced-advertising",
             jquery_selector:{
                 element:"div[id='setting-enhanced-advertising-content'] ",
-                valuePresence:"checked"
+                valueType:"checked"
 
             }//return checked or nothing
 
@@ -314,7 +314,7 @@ readLinkedInSettings =
             url: "https://www.linkedin.com/psettings/two-step-verification",
             jquery_selector:{
                 element:"div[id='setting-two-step-verification-content'] ",
-                valuePresence:"checked"
+                valueType:"checked"
 
             } //return checked or nothing
 
@@ -329,7 +329,7 @@ readInstagramSettings =
             url: "https://www.instagram.com/accounts/edit",
             jquery_selector:{
                 element:"input[id='pepChainingEnabled'] ",
-                valuePresence:"attrValue",
+                valueType:"attrValue",
                 attrValue:"value" //
 
             }
@@ -345,7 +345,7 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"div[class='controls login-verification-controls'] ",
-                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
@@ -356,7 +356,7 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='user_no_username_only_password_reset'] ",
-                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
@@ -367,12 +367,12 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='one_factor_optout_settings_off'] ",
-                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
             },
 
             jquery_selector:{
                 element:"input[id='one_factor_optout_settings_on'] ",
-                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
@@ -383,7 +383,7 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"fieldset[id='allow_media_tagging_fieldset'] ",
-                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
@@ -394,7 +394,7 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='user_protected'] ",
-                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
@@ -405,7 +405,7 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='user_geo_enabled'] ",
-                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
@@ -416,13 +416,13 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='user_discoverable_by_email'] ",
-                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             },
 
             jquery_selector:{
                 element:"input[id='user_mobile_discoverable'] ",
-                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
@@ -433,7 +433,7 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='allow_ads_personalization'] ",
-                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
@@ -444,19 +444,19 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='allow_contributor_request_all'] ",
-                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             },
 
             jquery_selector:{
                 element:"input[id='allow_contributor_request_following'] ",
-                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             },
 
             jquery_selector:{
                 element:"input[id='allow_contributor_request_none'] ",
-                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
@@ -467,7 +467,7 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='allow_dms_from_anyone'] ",
-                valuePresence:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
 
             }
 
