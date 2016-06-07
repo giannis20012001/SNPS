@@ -132,12 +132,11 @@ readGoogleSettings =
 readLinkedInSettings =
     [
         {
-            //Needs to be rechecked
             name: "Edit your public profile",
             url: "https://www.linkedin.com/profile/public-profile-settings",
             jquery_selector:{
-                element:"input[id='selector-full-visibilityLevel-saveWPSettings'] ",
-                valueType:"checked"
+                element:"input[name='visibilityLevel'] ",
+                valueType:"radio"
 
             }//return checked or nothing
 
