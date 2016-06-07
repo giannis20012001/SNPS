@@ -139,7 +139,7 @@ readLinkedInSettings =
                 element:"input[id='selector-full-visibilityLevel-saveWPSettings'] ",
                 valuePresence:"checked"
 
-            }//return selected or nothing
+            }//return checked or nothing
 
         },
 
