@@ -136,7 +136,7 @@ readLinkedInSettings =
             name: "Edit your public profile",
             url: "https://www.linkedin.com/profile/public-profile-settings",
             jquery_selector:{
-                element:"div[id='public-profile-settings'] ",
+                element:"input[id='selector-full-visibilityLevel-saveWPSettings'] ",
                 valuePresence:"checked"
 
             }//return selected or nothing
