@@ -290,7 +290,7 @@ readLinkedInSettings =
             }, //return true or false
 
             jquery_selector:{
-                element:"div[id='option-block-applications']",
+                element:"input[id='option-block-platforms']",
                 valueType:"checkbox"
 
             }//return true or false
@@ -301,14 +301,15 @@ readLinkedInSettings =
             name: "Advertising preferences",
             url: "https://www.linkedin.com/psettings/enhanced-advertising",
             jquery_selector:{
-                element:"div[id='setting-enhanced-advertising-content']",
-                valueType:"checked"
+                element:"input[id='option-ads-choices']",
+                valueType:"checkbox"
 
             }//return true or false
 
-        },
+        }
 
-        {
+       /* {
+            //TODO: Is special security measure. Must see how to read it optimally
             name: "Two-step verification",
             url: "https://www.linkedin.com/psettings/two-step-verification",
             jquery_selector:{
@@ -317,7 +318,7 @@ readLinkedInSettings =
 
             }//return true or false
 
-        }
+        }*/
 
     ];
 
