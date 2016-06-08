@@ -138,20 +138,19 @@ readLinkedInSettings =
                 element:"input[name='visibilityLevel']",
                 valueType:"radio"
 
-            }//return checked or nothing
+            }//return on or off
 
         },
 
         {
-            //TODO:Check if correct
             name: "Who can see your connections",
             url: "https://www.linkedin.com/psettings/connections-visibility",
 
             jquery_selector:{
-                element:"select[id='allow-connections-browse']",
-                valueType:"selected"
+                element:"option",
+                valueType:"option"
 
-            }//return selected or nothing
+            }//return selected option in text
 
         },
 
@@ -159,10 +158,10 @@ readLinkedInSettings =
             name: "How You Rank",
             url: "https://www.linkedin.com/psettings/how-you-rank",
             jquery_selector:{
-                element:"div[id='setting-how-you-rank-content']",
-                valueType:"checked"
+                element:"input[id='how-you-rank-option']",
+                valueType:"checkbox"
 
-            }//return checked or nothing
+            }//return true or false
 
         },
 
@@ -170,10 +169,10 @@ readLinkedInSettings =
             name: "Viewers of this profile also viewed",
             url: "https://www.linkedin.com/psettings/browse-map",
             jquery_selector:{
-                element:"div[id='setting-browse-map-content']",
-                valueType:"checked"
+                element:"input[id='option-browse-map']",
+                valueType:"checkbox"
 
-            }//return checked or nothing
+            }//return true or false
 
         },
 
@@ -181,10 +180,10 @@ readLinkedInSettings =
             name: "Sharing profile edits",
             url: "https://www.linkedin.com/psettings/activity-broadcast",
             jquery_selector:{
-                element:"div[id='setting-activity-broadcast-content']",
-                valueType:"checked"
+                element:"input[id='option-broadcast']",
+                valueType:"checkbox"
 
-            }//return checked or nothing
+            }//return true or false
 
         },
 
@@ -195,7 +194,7 @@ readLinkedInSettings =
                 element:"div[id='setting-profile-visibility-content']",
                 valueType:"checked"
 
-            }//return checked or nothing
+            }//return true or false
 
         },
 
@@ -206,7 +205,7 @@ readLinkedInSettings =
                 element:"div[id='option-news-mention']",
                 valueType:"checked"
 
-            }//return checked or nothing
+            }//return true or false
 
         },
 
@@ -277,7 +276,7 @@ readLinkedInSettings =
                 element:"div[id='meet-the-team-instructions']",
                 valueType:"checked"
 
-            }//return checked or nothing
+            }//return true or false
 
         },
 
@@ -288,13 +287,13 @@ readLinkedInSettings =
                 element:"div[id='setting-data-sharing-content']",
                 valueType:"checked"
 
-            }, //return checked or nothing
+            }, //return true or false
 
             jquery_selector:{
                 element:"div[id='setting-data-sharing-content']",
                 valueType:"checked"
 
-            }//return checked or nothing
+            }//return true or false
 
         },
 
@@ -305,7 +304,7 @@ readLinkedInSettings =
                 element:"div[id='setting-enhanced-advertising-content']",
                 valueType:"checked"
 
-            }//return checked or nothing
+            }//return true or false
 
         },
 
@@ -316,7 +315,7 @@ readLinkedInSettings =
                 element:"div[id='setting-two-step-verification-content']",
                 valueType:"checked"
 
-            } //return checked or nothing
+            }//return true or false
 
         }
 
@@ -485,7 +484,8 @@ var currentCallback;
         if (port.name == "SNPS") {
 
             var sequence = Promise.resolve();
-            privacySettings = readFacebookSettings.concat(readGoogleSettings).concat(readLinkedInSettings).concat(readInstagramSettings).concat(readTwitterSettings);
+            //privacySettings = readFacebookSettings.concat(readGoogleSettings).concat(readLinkedInSettings).concat(readInstagramSettings).concat(readTwitterSettings);
+            privacySettings = readLinkedInSettings;
 					
             privacySettings.forEach(function (setting) {
                 sequence = sequence.then(function () {

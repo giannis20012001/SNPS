@@ -12,7 +12,8 @@ port.onMessage.addListener(function (msg) {
 			case "checkbox": setting = jQuery(jquery_selector.element).attr("checked")?true:false; break;
             case "inner": setting = jQuery(jquery_selector.element).text(); break;
             case "classname": setting = jQuery(jquery_selector.element).hasClass(jquery_selector.attrValue); break;
-            case "radio" :setting = jQuery(jquery_selector.element+":checked").attr("value"); break;
+            case "radio" :setting = jQuery(jquery_selector.element + ":checked").attr("value"); break;
+            case "option": setting = jQuery(jquery_selector.element + ":selected").text(); break;
             default: setting = null;
         }
 
