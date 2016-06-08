@@ -328,7 +328,7 @@ readInstagramSettings =
             name: "Similar Account Suggestions",
             url: "https://www.instagram.com/accounts/edit",
             jquery_selector:{
-                element:"input[id='pepChainingEnabled'] ",
+                element:"input[id='pepChainingEnabled']",
                 valueType:"attrValue",
                 attrValue:"value" //
 
