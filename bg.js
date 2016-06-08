@@ -148,9 +148,9 @@ readLinkedInSettings =
 
             jquery_selector:{
                 element:"option",
-                valueType:"option"
+                valueType:"selected"
 
-            }//return selected option in text
+            }//return selected option value (true/false)
 
         },
 
@@ -191,10 +191,10 @@ readLinkedInSettings =
             name: "Profile viewing options",
             url: "https://www.linkedin.com/psettings/profile-visibility",
             jquery_selector:{
-                element:"div[id='setting-profile-visibility-content']",
-                valueType:"checked"
+                element:"input",
+                valueType:"radio"
 
-            }//return true or false
+            }//return selected option value string
 
         },
 
@@ -202,8 +202,8 @@ readLinkedInSettings =
             name: "Notifying connections when you’re in the news",
             url: "https://www.linkedin.com/psettings/news-mention-broadcast",
             jquery_selector:{
-                element:"div[id='option-news-mention']",
-                valueType:"checked"
+                element:"input[id='option-news-mention']",
+                valueType:"checkbox"
 
             }//return true or false
 
@@ -214,14 +214,14 @@ readLinkedInSettings =
             name: "Followers",
             url: "https://www.linkedin.com/psettings/allow-follow",
             jquery_selector:{
-                element:"div[id='setting-allow-follow-content']",
+                element:"option",
                 valueType:"selected"
 
-            }//return selected or nothing
+            }//return selected option value (true/false)
 
         },
 
-        {
+        /*{
             //TODO: Must check whether we need to read it or not
             name: "Blocking",
             url: "https://www.linkedin.com/psettings/member-blocking",
@@ -232,9 +232,9 @@ readLinkedInSettings =
 
             }//return blocking list or class="not-blocking"
 
-        },
+        },*/
 
-        {
+        /*{
             //TODO: Must check whether we need to read it or not
             name: "Unfollowed",
             url: "https://www.linkedin.com/psettings/customize-stream",
@@ -245,16 +245,16 @@ readLinkedInSettings =
 
             }//return unfollowed list or class="instructions" You are not currently hiding any content
 
-        },
+        },*/
 
         {
             name: "Suggesting you as a connection based on your email address",
             url: "https://www.linkedin.com/psettings/visibility/email",
             jquery_selector:{
-                element:"div[id='setting-visibility-email-content']",
+                element:"option",
                 valueType:"selected"
 
-            }//return selected or nothing
+            }//return selected option value (EVERYONE, SECOND_DEGREE_CONNECTIONS, FIRST_DEGREE_CONNECTIONS)
 
         },
 
@@ -262,10 +262,10 @@ readLinkedInSettings =
             name: "Suggesting you as a connection based on your phone number",
             url: "https://www.linkedin.com/psettings/visibility/phone",
             jquery_selector:{
-                element:"div[id='setting-visibility-phone-content']",
+                element:"option",
                 valueType:"selected"
 
-            }//return selected or nothing
+            }//return selected option value (EVERYONE, SECOND_DEGREE_CONNECTIONS, FIRST_DEGREE_CONNECTIONS)
 
         },
 
@@ -273,8 +273,8 @@ readLinkedInSettings =
             name: "Representing your organization",
             url: "https://www.linkedin.com/psettings/meet-the-team",
             jquery_selector:{
-                element:"div[id='meet-the-team-instructions']",
-                valueType:"checked"
+                element:"input[id='option-meet-the-team']",
+                valueType:"checkbox"
 
             }//return true or false
 
@@ -284,14 +284,14 @@ readLinkedInSettings =
             name: "Sharing data with third parties",
             url: "https://www.linkedin.com/psettings/data-sharing",
             jquery_selector:{
-                element:"div[id='setting-data-sharing-content']",
-                valueType:"checked"
+                element:"input[id='setting-data-sharing-content']",
+                valueType:"checkbox"
 
             }, //return true or false
 
             jquery_selector:{
-                element:"div[id='setting-data-sharing-content']",
-                valueType:"checked"
+                element:"div[id='option-block-applications']",
+                valueType:"checkbox"
 
             }//return true or false
 
