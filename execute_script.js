@@ -13,7 +13,7 @@ port.onMessage.addListener(function (msg) {
             case "inner": setting = jQuery(jquery_selector.element).text(); break;
             case "classname": setting = jQuery(jquery_selector.element).hasClass(jquery_selector.attrValue); break;
             case "radio" :setting = jQuery(jquery_selector.element + ":checked").attr("value"); break;
-            case "twitterradio" :setting = jQuery(jquery_selector.element + ":checked").attr("value"); break;
+            case "twitterRadio" :setting = jQuery(jquery_selector.element + ":checked").attr("value"); break;
             case "selected": setting = jQuery(jquery_selector.element + ":selected").attr("value");; break;
             default: setting = null;
         }

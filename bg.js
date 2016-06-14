@@ -388,7 +388,7 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[name='user[allow_media_tagging]']",
-                valueType:"radio",
+                valueType:"twitterRadio",
 
             }
 
