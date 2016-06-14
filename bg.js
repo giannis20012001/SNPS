@@ -345,7 +345,7 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='login_verification']",
-                valueType:"checkbox", //Return true of false
+                valueType:"checkbox" //Return true of false
 
             }
 
@@ -356,7 +356,7 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='user_no_username_only_password_reset']",
-                valueType:"checkbox", //Return true of false
+                valueType:"checkbox" //Return true of false
 
             }
 
@@ -367,7 +367,7 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='one_factor_optout_settings_off']",
-                valueType:"checkbox", //Return true of false
+                valueType:"checkbox" //Return true of false
             }
 
         },
@@ -377,7 +377,7 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='one_factor_optout_settings_on']",
-                valueType:"checkbox", //Return true of false
+                valueType:"checkbox" //Return true of false
 
             }
 
@@ -388,7 +388,7 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[name='user[allow_media_tagging]']",
-                valueType:"twitterRadio",
+                valueType:"twitterRadio"
 
             }
 
