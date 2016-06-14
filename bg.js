@@ -344,8 +344,8 @@ readTwitterSettings =
             name: "Login verification",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"div[class='controls login-verification-controls']",
-                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                element:"input[id='login_verification']",
+                valueType:"checkbox", //Return true of false
 
             }
 
@@ -356,23 +356,28 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='user_no_username_only_password_reset']",
-                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox", //Return true of false
 
             }
 
         },
 
         {
-            name: "Log in with code",
+            name: "Log in with code (Allow...)",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='one_factor_optout_settings_off']",
-                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
-            },
+                valueType:"checkbox", //Return true of false
+            }
 
+        },
+
+        {
+            name: "Log in with code (Always...)",
+            url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='one_factor_optout_settings_on']",
-                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox", //Return true of false
 
             }
 
@@ -486,7 +491,7 @@ var currentCallback;
 
             var sequence = Promise.resolve();
             //privacySettings = readFacebookSettings.concat(readGoogleSettings).concat(readLinkedInSettings).concat(readInstagramSettings).concat(readTwitterSettings);
-            privacySettings = readLinkedInSettings;
+            privacySettings = readTwitterSettings;
 					
             privacySettings.forEach(function (setting) {
                 sequence = sequence.then(function () {
