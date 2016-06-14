@@ -387,8 +387,8 @@ readTwitterSettings =
             name: "Photo tagging",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"fieldset[id='allow_media_tagging_fieldset']",
-                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                element:"input[name='user[allow_media_tagging]']",
+                valueType:"radio",
 
             }
 
