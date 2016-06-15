@@ -363,6 +363,7 @@ readTwitterSettings =
         },
 
         {
+            //TODO: Must find better way to return value
             name: "Log in with code (Allow...)",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
@@ -373,6 +374,7 @@ readTwitterSettings =
         },
 
         {
+            //TODO: Must find better way to return value
             name: "Log in with code (Always...)",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
