@@ -417,17 +417,24 @@ readTwitterSettings =
         },
 
         {
-            name: "Discoverability",
+            //TODO: Must find better way to return value
+            name: "Discoverability (1)",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='user_discoverable_by_email']",
-                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox" //Return true of false
 
-            },
+            }
 
+        },
+
+        {
+            //TODO: Must find better way to return value
+            name: "Discoverability (2)",
+            url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='user_mobile_discoverable']",
-                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox" //Return true of false
 
             }
 
@@ -438,30 +445,43 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='allow_ads_personalization']",
-                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox" //Return true of false
 
             }
 
         },
 
         {
-            name: "Twitter for teams",
+            //TODO: Must find better way to return value
+            name: "Twitter for teams (1)",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='allow_contributor_request_all']",
-                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox" //Return true of false
 
             },
 
+        },
+
+        {
+            //TODO: Must find better way to return value
+            name: "Twitter for teams (2)",
+            url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='allow_contributor_request_following']",
-                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox" //Return true of false
 
-            },
+            }
 
+        },
+
+        {
+            //TODO: Must find better way to return value
+            name: "Twitter for teams (3)",
+            url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='allow_contributor_request_none']",
-                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox" //Return true of false
 
             }
 
@@ -472,7 +492,7 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='allow_dms_from_anyone']",
-                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox" //Return true of false
 
             }
 
