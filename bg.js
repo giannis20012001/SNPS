@@ -385,12 +385,12 @@ readTwitterSettings =
 
         },
 
-        { //TODO: Must find correct way to return value
+        {
             name: "Photo tagging",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"input[name='user[allow_media_tagging]':checked]",
-                valueType:"twitterRadio"
+                element:"input[name='user[allow_media_tagging]'",
+                valueType:"radio"
 
             }
 
