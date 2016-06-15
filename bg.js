@@ -383,23 +383,23 @@ readTwitterSettings =
 
         },
 
-        {
+        /*{ //TODO: Must find correct way to return value
             name: "Photo tagging",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
-                element:"input[name='user[allow_media_tagging]']",
+                element:"input[type='radio']",
                 valueType:"twitterRadio"
 
             }
 
-        },
+        },*/
 
         {
             name: "Tweet privacy",
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='user_protected']",
-                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox" //Return true of false
 
             }
 
@@ -410,7 +410,7 @@ readTwitterSettings =
             url: "https://twitter.com/settings/security",
             jquery_selector:{
                 element:"input[id='user_geo_enabled']",
-                valueType:"checkbox", //could be attrValue (the value of attribute), attr(the presence of attribute), inner(inner text of element), classname
+                valueType:"checkbox" //Return true of false
 
             }
 
